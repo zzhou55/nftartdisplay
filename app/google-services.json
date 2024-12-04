@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "547496402054",
+    "project_id": "nftartdisplay-3c543",
+    "storage_bucket": "nftartdisplay-3c543.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:547496402054:android:76869e5608ca439045c507",
+        "android_client_info": {
+          "package_name": "com.example.nftartdisplay"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "547496402054-bqdhoe8k5n3ors8dujuujrqqtki2getd.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.nftartdisplay",
+            "certificate_hash": "65d35fea9d03b2b52001c8129a8a38362c8b821c"
+          }
+        },
+        {
+          "client_id": "547496402054-3vbsbbimti4j14cirg15c0osn5buagvk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDbFlaKKAxoLf0ehDU-50m1L2AArwFsk2A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "547496402054-3vbsbbimti4j14cirg15c0osn5buagvk.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
