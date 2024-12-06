@@ -1,9 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- Basic Colors -->
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="primaryColor">#6200EE</color>
-    <color name="backgroundColor">#FFFFFF</color>
-    <color name="googleButtonColor">#DB4437</color>
-    <color name="primaryTextColor">#000000</color>
+
+    <!-- Primary Colors -->
+    <color name="colorPrimary">#4A90E2</color> <!-- Consistent with theme: vibrant blue -->
+    <color name="colorPrimaryVariant">#007AFF</color> <!-- Slightly darker blue for contrast -->
+    <color name="colorOnPrimary">#FFFFFF</color> <!-- White for text/icons on primary background -->
+
+    <!-- Secondary Colors -->
+    <color name="colorSecondary">#50E3C2</color> <!-- Vibrant teal to complement primary -->
+    <color name="colorSecondaryVariant">#00B894</color> <!-- Darker teal for additional contrast -->
+    <color name="colorOnSecondary">#000000</color> <!-- Black for text/icons on secondary background -->
+
+    <!-- Background Colors -->
+    <color name="colorBackground">#F5F5F5</color> <!-- Light grey for clean and modern interface -->
+    <color name="googleButtonColor">#DB4437</color> <!-- Google Sign-In button color -->
+
+    <!-- Text Colors -->
+    <color name="primaryTextColor">#333333</color> <!-- Dark grey for better readability -->
 </resources>

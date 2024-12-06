@@ -3,7 +3,6 @@ package com.example.nftartdisplay;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
@@ -45,6 +44,12 @@ public class LoginActivity extends AppCompatActivity {
             String password = ((android.widget.EditText) findViewById(R.id.passwordInput)).getText().toString();
             loginUser(email, password);
         });
+
+        Button signUpButton = findViewById(R.id.signUpButton);
+        signUpButton.setOnClickListener(v -> {
+            Intent intent = new Intent(LoginActivity.this, SignUpActivity.class);
+            startActivity(intent);
+        });
     }
 
     private void signInWithGoogle() {
@@ -67,7 +72,6 @@ public class LoginActivity extends AppCompatActivity {
             firebaseAuthWithGoogle(account);
         } catch (ApiException e) {
             e.printStackTrace();
-            // Handle failure
             Toast.makeText(LoginActivity.this, "Google sign in failed.", Toast.LENGTH_SHORT).show();
         }
     }
@@ -77,6 +81,7 @@ public class LoginActivity extends AppCompatActivity {
         mAuth.signInWithCredential(credential).addOnCompleteListener(this, task -> {
             if (task.isSuccessful()) {
                 startActivity(new Intent(LoginActivity.this, HomeActivity.class));
+                Toast.makeText(LoginActivity.this, "Google sign in Successfully.", Toast.LENGTH_SHORT).show();
                 finish();
             } else {
                 Toast.makeText(LoginActivity.this, "Authentication Failed.", Toast.LENGTH_SHORT).show();
@@ -91,7 +96,6 @@ public class LoginActivity extends AppCompatActivity {
                 startActivity(new Intent(LoginActivity.this, HomeActivity.class));
                 finish();
             } else {
-                // Handle login failure
                 Toast.makeText(LoginActivity.this, "Authentication Failed.", Toast.LENGTH_SHORT).show();
             }
         });

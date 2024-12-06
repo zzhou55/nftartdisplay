@@ -2,23 +2,24 @@
 <resources>
 
     <!-- Base application theme -->
-    <style name="Theme.NFTArtDisplay" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+    <style name="Theme.NFTArtDisplay" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Primary brand color -->
-        <item name="colorPrimary">#4A90E2</item> <!-- A vibrant blue color to create a modern, tech look -->
-        <item name="colorPrimaryVariant">#007AFF</item> <!-- A slightly darker shade of blue for contrast -->
-        <item name="colorOnPrimary">#FFFFFF</item> <!-- White text on primary buttons -->
+        <item name="colorPrimary">@color/colorPrimary</item> <!-- Vibrant blue for a modern and trustworthy look -->
+        <item name="colorPrimaryVariant">@color/colorPrimaryVariant</item> <!-- A slightly darker shade of blue for contrast -->
+        <item name="colorOnPrimary">@color/colorOnPrimary</item> <!-- White text on primary buttons for contrast -->
 
         <!-- Secondary brand color -->
-        <item name="colorSecondary">#50E3C2</item> <!-- A vibrant teal to complement the primary blue -->
-        <item name="colorSecondaryVariant">#00B894</item> <!-- Darker teal for additional contrast -->
-        <item name="colorOnSecondary">#000000</item> <!-- Black text on secondary buttons -->
+        <item name="colorSecondary">@color/colorSecondary</item> <!-- A vibrant teal to complement the primary blue -->
+        <item name="colorSecondaryVariant">@color/colorSecondaryVariant</item> <!-- Darker teal for contrast -->
+        <item name="colorOnSecondary">@color/colorOnSecondary</item> <!-- Black text on secondary buttons -->
 
         <!-- Customize the status bar and navigation bar colors -->
-        <item name="android:statusBarColor">#007AFF</item>
-        <item name="android:navigationBarColor">#FFFFFF</item>
+        <item name="android:statusBarColor">@color/colorPrimaryVariant</item>
+        <item name="android:windowLightStatusBar">true</item> <!-- Light icons for better visibility on dark backgrounds -->
+        <item name="android:navigationBarColor">@color/white</item>
 
         <!-- Background color for activities -->
-        <item name="android:windowBackground">#F5F5F5</item> <!-- Light grey to make the interface look clean and modern -->
+        <item name="android:windowBackground">@color/colorBackground</item> <!-- Light grey for a clean, modern interface -->
 
         <!-- Button styles -->
         <item name="buttonStyle">@style/Widget.NFTArtDisplay.Button</item>
@@ -26,20 +27,37 @@
 
     <!-- Custom button style for the application -->
     <style name="Widget.NFTArtDisplay.Button" parent="Widget.MaterialComponents.Button">
-        <item name="android:backgroundTint">#4A90E2</item> <!-- Use primary color for buttons -->
-        <item name="android:textColor">#FFFFFF</item> <!-- White text for better contrast -->
+        <item name="android:backgroundTint">@color/colorPrimary</item> <!-- Use primary color for buttons -->
+        <item name="android:textColor">@color/colorOnPrimary</item> <!-- White text for better contrast -->
+        <item name="android:elevation">4dp</item> <!-- Subtle elevation for a modern look -->
         <item name="cornerRadius">16dp</item> <!-- Rounded corners to create a more friendly UI -->
     </style>
 
-    <!-- Text appearance for titles -->
+    <!-- Custom text style for titles -->
     <style name="TextAppearance.NFTArtDisplay.Title" parent="TextAppearance.MaterialComponents.Headline5">
-        <item name="android:textColor">#4A90E2</item>
+        <item name="android:textColor">@color/colorPrimary</item>
         <item name="android:textStyle">bold</item>
+        <item name="android:textSize">24sp</item> <!-- Consistent title size across activities -->
     </style>
 
-    <!-- Text appearance for body text -->
+    <!-- Custom text style for body text -->
     <style name="TextAppearance.NFTArtDisplay.Body" parent="TextAppearance.MaterialComponents.Body1">
-        <item name="android:textColor">#333333</item>
+        <item name="android:textColor">@color/primaryTextColor</item>
+        <item name="android:lineSpacingMultiplier">1.2</item> <!-- Set line spacing multiplier for readability -->
+        <item name="android:lineSpacingExtra">4dp</item> <!-- Additional spacing between lines for better readability -->
+    </style>
+
+    <!-- Custom card style for the application -->
+    <style name="Widget.NFTArtDisplay.Card" parent="Widget.MaterialComponents.CardView">
+        <item name="cardCornerRadius">16dp</item> <!-- Rounded corners for a friendly and modern look -->
+        <item name="cardElevation">8dp</item> <!-- Elevated shadow for a distinct visual hierarchy -->
+    </style>
+
+    <!-- Custom input style for TextInputLayout -->
+    <style name="Widget.NFTArtDisplay.TextInputLayout" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="boxBackgroundMode">outline</item>
+        <item name="boxStrokeColor">@color/colorPrimary</item> <!-- Primary color for focus indication -->
+        <item name="hintTextAppearance">@style/TextAppearance.NFTArtDisplay.Body</item> <!-- Unified hint style -->
     </style>
 
 </resources>
